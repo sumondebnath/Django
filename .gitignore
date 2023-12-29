@@ -1,0 +1,9 @@
+.vscode
+.cph/
+.vscode/
+*.txt
+*.exe
+*.bin
+djEnv
+djEnv/
+/djEnv
