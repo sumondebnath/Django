@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", veiw.home),
     path("proApp_One/", include("proApp_One.urls")),
+    path("proApp_Two/", include("proApp_Two.urls")),
     path('contact/', veiw.contact),
     path("doctor/", veiw.doctor)
 ]
