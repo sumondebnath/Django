@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context</title>
+</head>
+<body>
+    <h1>This is context page.</h1>
+    <h2>Name : {{name}}</h2>
+    <h3>Age : {{age}}</h3>
+    <h4>list : {{list}}</h4>
+
+    <!-- conditional statement -->
+    <h1>using conditional statement</h1>
+    {% if age >= 21 %}
+        <h5>Adult.</h5>
+    {% elif age <= 21 and age >= 10 %}
+    <h5>Child</h5>
+    {% else%}
+    <h5>Baby</h5>
+    {%endif%}
+
+    <!-- For loop -->
+    <h1>For Loop</h1>
+
+    {% for i in lst%}
+    <h5 style="color: rgb(18, 182, 81);">Name: {{i.name}} <br>  Age: {{i.age}} <br> Gender: {{i.gender}}</h5>
+    {% endfor %}
+
+    <h1>Using filters</h1>
+
+    <h1 style="font-size: 80px; color: greenyellow;">{{lst1 | join:"~"}}</h1>
+
+    <h2>{{birthdate | date:"D d M Y"}}</h2>     <!-- date in double court upper or lower its also different means -->
+
+    <h2>{{birthdate | date:"D d m y"}}</h2>
+
+    <h2>{{birthdate | date:"SHORT_DATE_FORMAT"}}</h2>       
+
+    <h2>{{birthdate | date:"date"}}</h2> 
+
+    <h3>{{ val | first}}</h3>
+
+    <h3>{{ val | last}}</h3>
+
+    <h4>{{val | length}}</h4>
+
+    <h4>{{lst | linenumbers}}</h4>
+    <h4>{{val | title}}</h4>
+
+    <h4>{{val | upper}}</h4>
+
+    <h4>{{val | lower}}</h4>
+
+    <h4>{{val | random}}</h4>
+
+    <h2>{{birthdate | time:"h:i"}}</h2>
+    <h4>{{birthdate | time:"H:i"}}</h4>
+
+
+</body>
+</html>
