@@ -1,0 +1,12 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+<!-- static use korle must be import ba load kora lagbe.-->
+
+{% block content %} 
+
+{{ block.super}}
+
+    <h1>This is the home page.</h1>
+    <img src="{% static 'bird01.jpg' %}" alt="Bird One Image" />
+{% endblock %}
