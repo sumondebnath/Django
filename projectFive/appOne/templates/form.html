@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <form method="post" action="/about/">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" name="userName">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" name="email">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+
+    
+
+{% endblock content %}
