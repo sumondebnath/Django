@@ -3,7 +3,7 @@
 {% block content %}
     <div style="width:50%; height: 500px; margin: auto;" class="pt-5">
         <h3>Movie Ration Form </h3>
-        <form method="get" action="/about/">
+        <form method="post" action="/about/">
             {% csrf_token %}
             <div class="mb-3">
               <label for="exampleInputName" class="form-label">Name</label>
