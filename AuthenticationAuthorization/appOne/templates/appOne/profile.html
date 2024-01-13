@@ -1,0 +1,18 @@
+{% extends "./base.html" %}
+
+{% block body %}
+    {% if messages %}
+    {% for m in messages %}
+        <!-- <small {% if m.tags %} class="{{m.tags}}" {% endif %}>{{m}}</small> -->
+        {{m}}
+    {% endfor %}
+    {% endif %}
+
+    <h3>Wellcome to the Profile.</h3>
+    <h1>{{user}}</h1>
+
+
+    <p><a class="btn btn-info" href="{% url 'change_Password_oldPassword' %}">Change Password Using Old Password</a></p>
+    <p><a class="btn btn-success" href="{% url 'change_password' %}">Change Password</a></p>
+    <p><a class="btn btn-secondary" href="{% url 'update_data' %}">update your Data</a></p>
+{% endblock body %}
