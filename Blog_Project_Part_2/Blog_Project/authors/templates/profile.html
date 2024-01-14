@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    
+    <div>
+        <a class="btn btn-primary" href="{% url 'edit_profile' %}">Edit Your Profile</a>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center px-5 pt-5 mt-3 mb-5">
+        {% for post in data %}
+            <div class="col-sm-4 mx-2 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <p class="card-text">
+                            {{post.content}}
+                        </p>
+                        <p>Author: <b><em>{{post.author.first_name}} {{post.author.last_name}}</em></b></p>
+                        <p>
+                            Categories: 
+                            {% for cate in post.category.all %}
+                                <button class="btn btn-secondary btn-sm" disabled>{{cate.name}}</button>
+                            {% endfor %}
+                        </p>
+                        <a href="{% url 'edit_posts' post.id %}" class="btn btn-warning">Edit</a>
+                        <a href="{% url 'delete_posts' post.id %}" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
