@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div>
+        {% for content in contents %}
+            <h1>{{content.creator.name}}</h1>
+            <h1>{{content.creator.profession}}</h1>
+            <h1>{{content.name}}</h1>
+            <h2>{{content.title}}</h2>
+            <h3>{{content.active}}</h3>
+            <h4>{{content.content_type}}</h4>
+            <a href="{% url 'get_content_foreign' content.id %}">GO TO</a> | 
+            <a href="{% url 'edit_content_foreign' content.id %}">Edit</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

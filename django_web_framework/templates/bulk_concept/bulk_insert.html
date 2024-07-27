@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+    <div>
+        <h1 style="text-align: center;">Bulk Insert For Voulentears...</h1>
+        <form action="" method="post">
+
+            {% csrf_token %}
+
+            {{ formset.management_form }}
+            <div style="display: flex; justify-content: center; align-items: center; gap: 150px;">
+                <div>
+                    <center>First Name</center>
+                </div>
+                <div>
+                    <center>Last Name</center>
+                </div>
+                <div>
+                    <center>Professions</center>
+                </div>
+            </div>
+
+            {% for form in formset %}
+                <div style="display: flex; justify-content: center; align-items: center; gap: 25px; margin-top: 10px;">
+                    <div>
+                        <center>{{form.first_name}}</center>
+                    </div>
+                    <div>
+                        <center>{{form.last_name}}</center>
+                    </div>
+                    <div>
+                        <center>{{form.professions}}</center>
+                    </div>
+                </div>
+            {% endfor %}
+
+            <center><button type="submit" style="margin-top: 100px;">Submit</button></center>
+        </form>
+    </div>
+
+{% endblock %}

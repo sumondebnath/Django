@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <a href="{% url 'all_content' %}">Back</a>
+
+    <div>
+        <h1>{{cont.name}}</h1>
+        <h2>{{cont.title}}</h2>
+        <h3>{{cont.active}}</h3>
+        <h4>{{cont.content_type}}</h4>
+
+    </div>
+
+
+{% endblock %}

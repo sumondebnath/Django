@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <a href="{% url 'insert_content' %}">Add Content</a>
+
+    <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 50px; margin-top: 50px;">
+        {% for cont in allContent %}
+            <div style="border: 2px solid gray; padding: 20px 30px; width: 30%;">
+                <h1>{{cont.name}}</h1>
+                <h2>{{cont.title}}</h2>
+                <h3>{{cont.active}}</h3>
+                <h4>{{cont.content_type}}</h4>
+                <a href="{% url 'get_details' cont.id %}">GO TO</a> | 
+                <a href="{% url 'edit_content' cont.id %}">Edit</a> | 
+                <a href="{% url 'delete_content' cont.id %}">Delete</a>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
