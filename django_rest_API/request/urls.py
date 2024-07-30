@@ -4,5 +4,5 @@ from request import views
 
 
 urlpatterns = [
-    path("get_request/", views.main, name="get_request"),
+    # path("get_request/", views.main, name="get_request"),
 ]
