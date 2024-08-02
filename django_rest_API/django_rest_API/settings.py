@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "request",
     "first_api",
     "news_api",
+    "ebook_api",
 ]
 
 MIDDLEWARE = [
@@ -85,6 +86,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+#------------------------ SECURE THE APIs ------------------------------------------------------------
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.IsAuthenticated',
+#         # 'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+#     ]
+# }
 
 
 # Password validation
@@ -130,3 +141,5 @@ MEDIA_URL = "/media/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+

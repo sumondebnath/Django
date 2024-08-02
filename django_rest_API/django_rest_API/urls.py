@@ -21,10 +21,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("auth/", include("rest_framework.urls")),      # this is for the log-in / out option created in rest_framework page.
     # path("", include("request.urls")),
     path("api/", include("first_api.urls")),
     path("api/articles/", include("news_api.urls")),
 
+    path("ebooks/", include("ebook_api.urls")),
 ]
 
 if settings.DEBUG:
