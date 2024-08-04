@@ -22,11 +22,16 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("auth/", include("rest_framework.urls")),      # this is for the log-in / out option created in rest_framework page.
+    # path("api/rest-auth/", include("rest_auth.urls")),      # this is the rest_auth authentication provide by django_rest_auth package but its given error
+    path("api/rest-auth/", include("dj_rest_auth.urls")),      # thats why using the dj_rest_auth, it is similar django_rest_auth
+
     # path("", include("request.urls")),
     path("api/", include("first_api.urls")),
     path("api/articles/", include("news_api.urls")),
 
     path("ebooks/", include("ebook_api.urls")),
+
+    path("profile_api/", include("profile_api.urls")),
 ]
 
 if settings.DEBUG:

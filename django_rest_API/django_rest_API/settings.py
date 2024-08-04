@@ -39,11 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     "rest_framework",
+    "rest_framework.authtoken",
+
+    "rest_auth",
 
     "request",
     "first_api",
     "news_api",
     "ebook_api",
+    "profile_api",
 ]
 
 MIDDLEWARE = [
@@ -104,6 +108,19 @@ DATABASES = {
 #     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
 #     'PAGE_SIZE': 1
 # }
+
+
+
+#----------------------------------- DEFAULT_AUTHENTICATION_CLASSES ----------------------------------------------------
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
+
+
 
 
 # Password validation
