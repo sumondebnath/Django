@@ -34,4 +34,11 @@
 	3. Views(generics(GenericAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView, CreateAPIView), Mixin(ListModelMixin, CreateModelMixin))
 	4. built-in / custom Pagination and Built-in / Custom Permissions (api Dir)
 	
-
+## Profile APIs Dir: 
+	1. Models with Relatins (Meta)
+	2. ModelSerializers and Seperate the ImageField and create 
+	3. In Views create Multiple viewsets using (generics, mixins, viewsets, ModelViewsets, APIViews)
+	4. Permissions (Built-in permissions, Customs-permissions)
+	5. Filters(Customs filters, built-in-filters)
+	6. __init__, apps, signals, tests, also create a dir in the root dir (clients).
+	7. Token authentications but also not provide.
